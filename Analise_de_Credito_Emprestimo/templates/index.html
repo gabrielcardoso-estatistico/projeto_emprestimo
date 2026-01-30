@@ -1,0 +1,46 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Sistema de Análise de Crédito</title>
+            <style>
+                body { font-family: Arial; padding: 20px; }
+                .form-container { max-width: 500px; margin: auto; }
+                input, select { width: 100%; padding: 8px; margin: 5px 0; }
+                button { background: #007bff; color: white; padding: 10px; border: none; }
+                .result { padding: 20px; margin: 20px 0; border-radius: 5px; }
+                .aprovado { background: green; color: white; }
+                .negado { background: red; color: white; }
+                .erro { background: orange; color: white; }
+            </style>
+        </head>
+        <body>
+            <div class="form-container">
+                <h1>Análise de Crédito</h1>
+                <form action="/predict" method="POST">
+                    Sexo: 
+                    <select name="sexo"><option value="1">Masculino</option><option value="0">Feminino</option></select><br>
+                    Casado: 
+                    <select name="casado"><option value="1">Sim</option><option value="0">Não</option></select><br>
+                    Dependentes: <input type="number" name="dependentes" value="0"><br>
+                    Graduação: 
+                    <select name="educacao"><option value="1">Graduado</option><option value="0">Não Graduado</option></select><br>
+                    Conta Própria: 
+                    <select name="conta_propria"><option value="1">Sim</option><option value="0">Não</option></select><br>
+                    Rendimento: <input type="number" name="rendimento" step="0.01"><br>
+                    Valor Empréstimo: <input type="number" name="valor_emprestimo" step="0.01"><br>
+                    <button type="submit">ANALISAR</button>
+                </form>
+                
+                {% if resultado %}
+                <div class="result {{ status }}">
+                    <h2>{{ resultado }}</h2>
+                    {% if probabilidade %}
+                    <p>Probabilidade: {{ probabilidade }}%</p>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+        </body>
+        </html>
+        
