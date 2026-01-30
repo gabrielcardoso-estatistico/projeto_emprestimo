@@ -10,31 +10,31 @@
 - Colocando em Produção (Flask)
 
 # Treinamento de Diversos Modelos
-=== Treinando Regressão Logística === 
+**=== Treinando Regressão Logística ===**
 
 Melhor F1: 0.5126 | Acurácia: 0.6504
 
-=== Treinando SVM ===
+**=== Treinando SVM ===**
 
 Melhor F1: 0.6306 | Acurácia: 0.6585
 
-=== Treinando Random Forest ===
+**=== Treinando Random Forest ===**
 
 Melhor F1: 0.5446 | Acurácia: 0.6098
 
-=== Treinando Gradient Boosting ===
+**=== Treinando Gradient Boosting ===**
 
 Melhor F1: 0.5597 | Acurácia: 0.6098
 
-=== Treinando KNN ===
+**=== Treinando KNN ===**
 
 Melhor F1: 0.5661 | Acurácia: 0.6423
 
-=== Treinando Árvore de Decisão ===
+**=== Treinando Árvore de Decisão ===**
 
 Melhor F1: 0.5655 | Acurácia: 0.5935
 
-=== Treinando XGBoost ===
+**=== Treinando XGBoost ===**
 
 Melhor F1: 0.5304 | Acurácia: 0.6341
 
